@@ -1,0 +1,47 @@
+LEGENDS OF ELDORIA - GDD TÓM TẮT
+==================================
+
+Thể loại: Fantasy Action RPG 2D
+Góc nhìn: Top-down
+Phong cách: Pixel art màu sắc, lấy cảm hứng từ cảm giác phiêu lưu 2D của
+The Legend of Zelda: The Minish Cap; không sao chép nhân vật, bản đồ hay tài nguyên.
+Nền tảng: Nintendo DS/DSi và melonDS/DeSmuME
+Màn hình trên: gameplay
+Màn hình dưới: status, HP/MP, EXP, Gold, menu thông tin
+Chiến đấu: real-time action
+Thế giới: các khu vực mở kết nối với nhau
+Độ khó: trung bình-khó
+Chết: mất một phần vật phẩm (cần thiết kế cụ thể ở giai đoạn RPG)
+Tiến trình: người chơi tự phân bổ Attribute Points khi lên cấp
+
+Chủng tộc dự kiến: Human, Elf, Dwarf
+Class dự kiến: Knight, Barbarian, Mage, Rogue, Ranger, Cleric
+Thuộc tính dự kiến: STR, VIT, AGI, DEX, INT, WIS, DEF, LUK
+Thông số chiến đấu: HP, MP, ATK, MATK, Critical, Evasion, EXP, Gold
+
+Phạm vi V0.1:
+- Một khu rừng thử nghiệm
+- Nhân vật placeholder
+- Goblin placeholder
+- Di chuyển bốn hướng
+- Va chạm bản đồ cơ bản
+- Goblin đuổi theo người chơi
+- Tấn công cơ bản
+- HP, EXP, Gold hiển thị
+- Màn hình trên gameplay, màn hình dưới thông tin
+
+Chưa có trong V0.1:
+- Chọn Race/Class
+- Inventory và Equipment
+- Hệ thống nhiệm vụ
+- Boss
+- Save/Load
+- Bản đồ open-world hoàn chỉnh
+- Âm thanh và sprite animation hoàn chỉnh
+
+Lộ trình:
+V0.1: nền tảng di chuyển, bản đồ, va chạm, Goblin, tấn công
+V0.2: combat mở rộng, nhiều loại quái, animation và cân bằng
+V0.3: Race/Class, Level, Attributes, Inventory, Equipment
+V0.4: làng, NPC, nhiệm vụ, dungeon, boss
+V1.0: save/load, âm thanh, nội dung hoàn chỉnh, tối ưu và kiểm thử thực tế
