@@ -1,0 +1,44 @@
+
+name: Build Eldoria NDS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:20260610
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          echo "DEVKITPRO=$DEVKITPRO"
+          echo "DEVKITARM=$DEVKITARM"
+          arm-none-eabi-gcc --version
+          make --version
+
+      - name: Build Nintendo DS ROM
+        run: |
+          make clean || true
+          make
+
+      - name: Verify NDS output
+        run: |
+          test -f eldoria_v01.nds
+          file eldoria_v01.nds
+          ls -lh eldoria_v01.nds
+
+      - name: Upload ROM and build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eldoria-V0.1-NDS-and-build
+          path: |
+            eldoria_v01.nds
+            build/
+          if-no-files-found: error
+          retention-days: 30
