@@ -15,6 +15,11 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v4
 
+      - name: Add devkitPro tools to PATH
+        run: |
+          echo "$DEVKITARM/bin" >> "$GITHUB_PATH"
+          echo "$DEVKITPRO/tools/bin" >> "$GITHUB_PATH"
+
       - name: Show toolchain
         run: |
           echo "DEVKITPRO=$DEVKITPRO"
