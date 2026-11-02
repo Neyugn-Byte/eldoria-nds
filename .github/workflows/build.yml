@@ -32,6 +32,14 @@ jobs:
           arm-none-eabi-gcc --version
           make --version
 
+      - name: Install Nintendo DS libraries
+        run: |
+          if command -v dkp-pacman >/dev/null 2>&1; then
+            dkp-pacman -Sy --noconfirm nds-dev
+          else
+            "$DEVKITPRO/pacman/bin/pacman" -Sy --noconfirm nds-dev
+          fi
+
       - name: Build Nintendo DS ROM
         run: |
           make clean || true
